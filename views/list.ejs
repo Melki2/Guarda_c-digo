@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de usuários</title>
+</head>
+<body>
+     <h1>Listagem de usuários</h1>
+     <p>
+         <a href="/add"> Adicionar</a>
+     </p>
+       <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Senha</th>
+                <th>Foto</th>
+                <th>Deletar</th>
+            </tr>
+            <% Usuarios.forEach(function(usuario){%>
+            <tr>
+                <th><%=usuario._id%></th>
+                <th><%=usuario.nome%></th>
+                <th><%=usuario.email%></th>
+                <th><%=usuario.senha%></th>
+                <th><%=usuario.foto%></th>
+                <th>
+                    <a href="/del/<%=usuario._id%>">Deletar</a>
+                </th>
+            </tr>
+            <%})%>
+       </table>
+</body>
+</html>
