@@ -6,10 +6,6 @@ app.set("view engine", "ejs");
 
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/", function (req, res) {
-  console.log("Oi mundo");
-});
-
 app.get("/add", function (req, res) {
   res.render("index.ejs", {});
 });
